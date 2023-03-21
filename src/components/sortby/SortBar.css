@@ -1,0 +1,11 @@
+.sort-main {
+  display: flex;
+  justify-content: space-between;
+  margin: 1% 5%;
+  /* background-color: #e3e4e4; */
+}
+
+.sort-items {
+  border-radius: 0;
+  height: 34px;
+}

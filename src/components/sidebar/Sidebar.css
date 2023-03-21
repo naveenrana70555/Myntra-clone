@@ -1,0 +1,27 @@
+.filter-categories {
+  border: 0.5px solid gray;
+  border-top: none;
+  padding: 10% 0 10% 15%;
+  width: 100%;
+}
+.filter-gender {
+  width: 100%;
+  border: 0.5px solid gray;
+  padding: 10% 0 10% 15%;
+}
+.filter-brand {
+  width: 100%;
+  border: 0.5px solid gray;
+  border-top: none;
+  padding: 10% 0 10% 15%;
+}
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: left;
+  align-items: center;
+}
+.filter-categories .ant-checkbox-group {
+  width: 116px;
+}

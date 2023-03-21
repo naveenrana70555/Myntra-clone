@@ -1,0 +1,32 @@
+.image-card {
+  margin: 10px 45px 20px 0;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  height: max-content;
+  background-color: white;
+}
+.image-card:hover {
+  margin: 10px 45px 20px 0;
+  height: max-content;
+  box-shadow: none;
+}
+.image-button {
+  display: flex;
+  width: 100%;
+  justify-self: center;
+  align-self: center;
+}
+.image-button button {
+  width: 90%;
+  color: #ff3e6c;
+  border: 0.4px solid #ff3e6c;
+  background-color: white;
+  height: 30px;
+  margin: 0 0 7px 9px;
+}
+.image-button button:hover {
+  color: white;
+  background-color: #ff3e6c;
+}
+.image-holder {
+  padding: 5px;
+}

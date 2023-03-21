@@ -1,0 +1,6 @@
+.Cart-card {
+  display: flex;
+  flex-direction: column;
+  height: 228px;
+  width: 203px;
+}

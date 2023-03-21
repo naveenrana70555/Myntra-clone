@@ -1,0 +1,6 @@
+.home {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 18% 82%;
+  background-color: #e3e4e4;
+}

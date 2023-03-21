@@ -1,0 +1,53 @@
+.nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color: white;
+  border-bottom: 0.1px solid gray;
+}
+.nav-list ul li:hover {
+  border-bottom: 3px solid #ff3e6c;
+}
+.nav-list ul {
+  display: flex;
+  list-style: none;
+}
+.nav-list ul li > a {
+  padding: 0px 10px;
+  text-decoration: none;
+  list-style: none;
+  color: black;
+}
+sup {
+  font-size: 11px;
+  color: #ff3e6c;
+}
+.nav-icons {
+  display: flex;
+  justify-content: space-around;
+  gap: 12px;
+  color: black;
+  font-size: 416;
+}
+.nav-search .ant-input-affix-wrapper {
+  background-color: gray;
+  width: 100%;
+}
+.nav-search {
+  background-color: #e0e0e0;
+  width: 30%;
+  border: none;
+}
+.nav-input {
+  width: inherit;
+}
+.icon-setter {
+  display: flex;
+  flex-direction: column;
+}
+.icon-label {
+  margin-left: -2px;
+}

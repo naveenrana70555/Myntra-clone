@@ -1,0 +1,63 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+.same {
+  padding: 10px;
+  width: 200px;
+  border-radius: 5px;
+  border: 3px solid whitesmoke;
+}
+.sign {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(255, 239, 242);
+  height: 100vh;
+}
+.sign-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: white;
+  width: 600px;
+}
+.htag {
+  position: relative;
+  padding: 20px;
+  left: 50px;
+}
+.name {
+  font-size: 18px;
+  font-weight: 500;
+  padding: 10px;
+}
+.email {
+  font-size: 18px;
+  font-weight: 500;
+  padding: 10px;
+}
+.pass {
+  font-size: 18px;
+  font-weight: 500;
+  padding: 10px;
+}
+.btn {
+  padding: 10px 10px 20px 10px;
+  width: 224px;
+  height: 34px;
+  font-weight: 500;
+}
+.btn-sub:hover {
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.btn-sub {
+  width: 100%;
+  padding: 5px;
+  background-color: rgb(255, 239, 242);
+  border: none;
+  border-radius: 5px;
+  height: 100%;
+}
