@@ -18,7 +18,9 @@ export function ImageCard({ img, product, price, brand, id, handleOpen }) {
         style={{ paddingLeft: "9px", marginBottom: "5px" }}
       >
         <h3>{brand.toUpperCase()}</h3>
-        <p style={{ margin: "-15px 0px" }}>{product}</p>
+        <p style={{ margin: "-1px 0px", textTransform: "capitalize" }}>
+          {product}
+        </p>
         <p>Rs {price} /-</p>
       </div>
       <div className="image-button">

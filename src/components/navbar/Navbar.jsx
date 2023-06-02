@@ -3,17 +3,19 @@ import myntralogo from "../myntra.png";
 import "./Navbar.css";
 import { Badge, Input } from "antd";
 import { WishListContext } from "../../App";
-import { CartContext } from "../../App";
+import { CartContext } from "../../Router";
 import {
   HeartOutlined,
   UserOutlined,
   ShoppingOutlined,
   SearchOutlined,
 } from "@ant-design/icons";
+import { useNavigate, Link } from "react-router-dom";
 
 export function Navbar({ searchItem }) {
   const { wish } = useContext(WishListContext);
   const { cart } = useContext(CartContext);
+  const navigate = useNavigate();
   return (
     <div className="navbar-main">
       <div className="nav">
@@ -73,11 +75,11 @@ export function Navbar({ searchItem }) {
             </div>
           </div>
           <div className="icon-setter">
-            <div>
+            <Link to={"/checkoutProduct"}>
               <Badge count={cart.length} showZero>
                 <ShoppingOutlined id="cart" />
               </Badge>
-            </div>
+            </Link>
             <div className="icon-label">
               <label htmlFor="cart">Cart</label>
             </div>

@@ -14,16 +14,21 @@ export function ProductData({ category, data, brand, searchitem, sort }) {
     sorted = ApiData.sort((a, b) => {
       return parseInt(a.price) - parseInt(b.price);
     });
-  } else {
+  } else if (sort === "high") {
     sorted = ApiData.sort((a, b) => {
       return parseInt(b.price) - parseInt(a.price);
     });
+  } else if (sort === "lessfivehundred") {
+    sorted = ApiData.filter((item) => item.price < 500);
+  } else {
+    sorted = ApiData.filter((item) => item.price > 500);
   }
+
+  ///////////////////////////////////////////////
   let filteredData = sorted.filter((value) =>
-    data === ""
-      ? ApiData && (searchitem === "" ? true : searchitem === value.pname)
-      : value.filter === data || searchitem === value.pname
+    data === "" ? ApiData && (searchitem === "" ? true : searchitem === value.pname): value.filter === data || searchitem === value.pname
   );
+  /////////////////////////////////////////////////
   if (category.length > 0) {
     filteredData = filteredData.filter((value) =>
       category.includes(value.category)
@@ -36,7 +41,6 @@ export function ProductData({ category, data, brand, searchitem, sort }) {
   const handleOpen = (e) => {
     setOpen(true);
     setIdk(e.target.id);
-    // console.log(e.target.id);
   };
 
   return (

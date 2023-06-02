@@ -1,15 +1,26 @@
 // import { Modal } from "antd";
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 // import { CheckoutProduct } from "../CheckoutProduct/CheckoutProduct";
 import { ApiData } from "../datadetails";
 import "./Details.css";
-import { CartContext } from "../../App";
+import { CartContext } from "../../Router";
 
 export function Details({ id }) {
   const { cart, setCart } = useContext(CartContext);
+
   const fildata = ApiData.filter((value) => {
-    return id == value.id;
+    return value.id === Number(id);
   });
+  console.log(cart);
+  const handleCartNumber = function (unique) {
+    const num = cart.filter((item) => item.id === unique);
+    if (num.length === 0) {
+      fildata[0].item = 1;
+      setCart([...cart, fildata[0]]);
+    } else {
+      alert("its already in you cart");
+    }
+  };
   return (
     <>
       {fildata.map((data) => (
@@ -34,21 +45,23 @@ export function Details({ id }) {
             <hr
               style={{
                 width: "50%",
-                transform: "translateX(-50%)",
-                marginTop: "25px",
+                margin: "25px 0px",
               }}
             />
-            <p>
+            <p style={{ marginBottom: "23px" }}>
               Amazing clothing you would love the asthectic look and feel of the
               fabric and will enjoy the time you have it on !
             </p>
-            <h2>Rs {data.price} /-</h2>
+            <h2 className="detail-price">Rs {data.price} /-</h2>
             <p className="size">{data.size[0]}</p>
             <p className="size">{data.size[1]}</p>
             <p className="size">{data.size[2]}</p>
             <br />
             <br />
-            <button className="addcart" onClick={() => setCart([...cart, id])}>
+            <button
+              className="addcart"
+              onClick={() => handleCartNumber(data.id)}
+            >
               Add to Cart
             </button>
             <button className="addwishlist">Wishlist</button>

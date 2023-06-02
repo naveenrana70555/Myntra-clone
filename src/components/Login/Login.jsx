@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Login.css";
-import myntraLogin from "../f5e9a029-33c3-4a92-811b-ef7917fe6d441674670210687-offer-banner-300-600x240-code-_-MYNTRA300.webp";
+import myntralogo from "../Loginmyntra.png";
 import { useNavigate, Link } from "react-router-dom";
 
 export function Login() {
@@ -26,7 +26,7 @@ export function Login() {
     <div className="login-main">
       <div className="login">
         <div className="login-img">
-          <img src={myntraLogin} alt="loading..." className="image" />
+          <img src={myntralogo} alt="loading..." className="image" />
         </div>
         <div className="login-form">
           <form onSubmit={submit}>
@@ -63,7 +63,7 @@ export function Login() {
             </div>
           </form>
           <Link to={"/signup"} className="register">
-            <button>for new users</button>
+            <button className="new-user">for new users</button>
           </Link>
         </div>
       </div>

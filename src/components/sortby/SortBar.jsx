@@ -15,6 +15,8 @@ export function SortBar({ sortChange }) {
             </option>
             <option value="low">Price Low to High</option>
             <option value="high">Price High to Low</option>
+            <option value="lessfivehundred">less than 500</option>
+            <option value="morethanfivehundred">more than 500</option>
           </select>
         </form>
       </div>

@@ -4,7 +4,7 @@
   justify-content: space-around;
   align-items: center;
   padding: 10px;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
   background-color: white;
   border-bottom: 0.1px solid gray;
 }
@@ -33,7 +33,7 @@ sup {
   font-size: 416;
 }
 .nav-search .ant-input-affix-wrapper {
-  background-color: gray;
+  background-color: #d3cfcf;
   width: 100%;
 }
 .nav-search {
@@ -43,6 +43,14 @@ sup {
 }
 .nav-input {
   width: inherit;
+  padding: 7px;
+  border-radius: 6px;
+  font-size: 16px;
+  background: #fbfbfb;
+  border: 2px solid transparent;
+  height: 36px;
+  box-shadow: 0 0 0 1px #dddddd, 0 2px 4px 0 rgb(0 0 0 / 7%),
+    0 1px 1.5px 0 rgb(0 0 0 / 5%);
 }
 .icon-setter {
   display: flex;
@@ -50,4 +58,9 @@ sup {
 }
 .icon-label {
   margin-left: -2px;
+}
+
+.nav-input:focus {
+  border: 2px solid #000;
+  border-radius: 4px;
 }
